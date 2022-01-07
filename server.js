@@ -1,4 +1,4 @@
-// var http = require('http');
+var http = require('http');
 
 // http.createServer(function (req, res) {
 //   res.writeHead(200, {'Content-Type': 'text/html'});
@@ -6,9 +6,9 @@
 // }).listen(8080);
 // console.log('Hello World');
 
-var http = require('http');
-var tl = require("./todolist");
-var url = require("url")
+//var http = require('http');
+//var tl = require("./todolist");
+//var url = require("url")
 
 http.createServer(function (req, res) {
   res.writeHead(200, {'Content-Type': 'text/html'});
@@ -16,5 +16,9 @@ http.createServer(function (req, res) {
   console.log(req.url);
   res.write("A faire: " + tl.searchtask());
   res.write(req.url);
-}).listen(8080);
+}).listen(8282);
 // console.log('Hello World');
+
+const user = require("./user");
+  
+console.log(user);
